@@ -14,6 +14,7 @@
             min-height: 100vh;
             background-color: #FF0000;
             font-family: 'Arial', sans-serif;
+            box-sizing: border-box;
         }
 
         .card {
@@ -23,12 +24,12 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             text-align: center;
             max-width: 450px;
-            width: 90%;
+            width: 100%;
         }
 
         h1 {
             color: #000000;
-            font-size: 2em;
+            font-size: 1.8em;
             margin-bottom: 15px;
         }
 
@@ -63,17 +64,21 @@
             margin-bottom: 15px;
         }
 
+        /* Galeria ajustada */
         .gallery {
             display: flex;
             gap: 10px;
             justify-content: center;
+            align-items: center;
             margin-top: 15px;
+            width: 100%;
         }
 
         .gallery img {
             width: 48%;
-            height: 140px;
-            object-fit: cover;
+            height: 180px; /* Aumentado um pouco para dar mais destaque */
+            object-fit: cover; /* Recorta o excesso sem distorcer a imagem */
+            object-position: center; /* Centraliza o enquadramento */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             display: none;
