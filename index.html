@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Minha Namorada</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #FF0000;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #000000;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .hearts-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .heart {
+            font-size: 40px;
+            color: #e63946;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .heart:hover {
+            transform: scale(1.3);
+        }
+
+        .interactive-text {
+            font-size: 0.9em;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            color: #000000;
+            font-size: 1.1em;
+            font-weight: bold;
+            min-height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .gallery {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .gallery img {
+            width: 48%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Para o Meu Amor eterno ❤️</h1>
+        <p class="interactive-text">Clique em um dos corações abaixo:</p>
+        
+        <div class="hearts-container">
+            <div class="heart" onclick="abrirSurpresa(1)">❤️</div>
+            <div class="heart" onclick="abrirSurpresa(2)">💖</div>
+            <div class="heart" onclick="abrirSurpresa(3)">❤️</div>
+        </div>
+
+        <p class="message" id="mensagem">Escolha um coração para lembrar de cada momento único!</p>
+
+        <div class="gallery">
+            <img id="foto1" src="" alt="Foto 1">
+            <img id="foto2" src="" alt="Foto 2">
+        </div>
+    </div>
+
+    <script>
+        function abrirSurpresa(opcao) {
+            const mensagem = document.getElementById('mensagem');
+            const foto1 = document.getElementById('foto1');
+            const foto2 = document.getElementById('foto2');
+
+            foto1.style.display = 'block';
+            foto2.style.display = 'block';
+
+            if (opcao === 1) {
+                mensagem.innerText = "Oi Meu amor, quero lhe dizer que cada momento com você é unico!!";
+                foto1.src = "WhatsApp Image 2026-07-13 at 17.20.34.jpeg";
+                foto2.src = "WhatsApp Image 2026-08-02 at 11.45.25.jpeg";
+            } else if (opcao === 2) {
+                mensagem.innerText = "Cada momento, me faz ter certeza que cada vez mais eu quero você na minha vida, espero que o tempo passe o mais rapido possivel para podermos estar juntos.";
+                foto1.src = "WhatsApp Image 2026-09-03 at 12.17.24.jpeg";
+                foto2.src = "WhatsApp Image 2026-08-13 at 10.51.05.jpeg";
+            } else if (opcao === 3) {
+                mensagem.innerText = "Em dezembro nos iremos nos reencontrar novamente e poderemos viver momentos unicos juntos meu amor, e eu não vejo a hora de estar perto do meu amor!!!! Você faz minha vida ter mais cores e um som diferente por me amar meu amor.";
+                foto1.src = "WhatsApp Image 2026-08-13 at 19.23.19.jpeg";
+                foto2.src = "WhatsApp Image 2026-08-15 at 21.29.56.jpeg";
+            }
+        }
+    </script>
+
+</body>
+</html>
